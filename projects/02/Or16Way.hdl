@@ -8,8 +8,8 @@
  * out = (in[0] or in[1] or ... or in[7])
  */
 
-CHIP Or8Way {
-    IN in[8];
+CHIP Or16Way {
+    IN in[16];
     OUT out;
 
     PARTS:
@@ -20,5 +20,13 @@ CHIP Or8Way {
         Or(a = r3, b = in[4], out = r4);
         Or(a = r4, b = in[5], out = r5);
         Or(a = r5, b = in[6], out = r6);
-        Or(a = r6, b = in[7], out = out);
+        Or(a = r6, b = in[7], out = r7);
+        Or(a = r7, b = in[8], out = r8);
+        Or(a = r8, b = in[9], out = r9);
+        Or(a = r9, b = in[10], out = r10);
+        Or(a = r10, b = in[11], out = r11);
+        Or(a = r11, b = in[12], out = r12);
+        Or(a = r12, b = in[13], out = r13);
+        Or(a = r13, b = in[14], out = r14);
+        Or(a = r14, b = in[15], out = out);
 }
